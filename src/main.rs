@@ -6,8 +6,8 @@ use std::fs::File;
 use std::io::BufWriter;
 
 fn main() {
-    const IMG_WIDTH: i32 = 8192;
-    const IMG_HEIGHT: i32 = 8192;
+    const IMG_WIDTH: i32 = 1024;
+    const IMG_HEIGHT: i32 = 1024;
     let max_iterations = 32;
     let cmin_x: f32 = -2.0;
     let cmax_x: f32 = 1.0;
@@ -61,7 +61,7 @@ fn main() {
 
                 for i in 0i32..8 {
                     let j = (255 - (ret.extract(i as usize) * iter_scale) % 255) as u8;
-                    let index: usize = ((y * IMG_WIDTH + x + i) * 3) as usize;
+                    let index = ((y * IMG_WIDTH + x + i) * 3) as usize;
                     image[index] = (255 * x / IMG_HEIGHT) as u8;
                     image[index + 1] = j;
                     image[index + 2] = (255 * y / IMG_WIDTH) as u8;
@@ -72,10 +72,11 @@ fn main() {
 
     let path = Path::new(r"image.png");
     let file = File::create(path).unwrap();
-    let ref mut bufw = BufWriter::new(file);
+    let bufw = &mut BufWriter::new(file);
     
     let mut encoder = png::Encoder::new(bufw, IMG_WIDTH as u32, IMG_WIDTH as u32);
     encoder.set_depth(png::BitDepth::Eight);
+    encoder.set_color(png::ColorType::RGB);
     let mut writer = encoder.write_header().unwrap();
     writer.write_image_data(&image).unwrap();
 }

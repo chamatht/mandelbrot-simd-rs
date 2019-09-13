@@ -1,5 +1,5 @@
 [package]
-name = "mandelbrot2"
+name = "mandelbrot-simd-rs"
 version = "0.1.0"
 authors = ["chamatht"]
 edition = "2018"
@@ -13,4 +13,4 @@ png = "0.15.0"
 [profile.release]
 lto=true
 opt-level=2
-debug=true
+#debug=true

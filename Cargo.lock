@@ -46,7 +46,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mandelbrot2"
+name = "mandelbrot-simd-rs"
 version = "0.1.0"
 dependencies = [
  "packed_simd 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
