@@ -80,3 +80,4 @@ fn main() {
     let mut writer = encoder.write_header().unwrap();
     writer.write_image_data(&image).unwrap();
 }
+
