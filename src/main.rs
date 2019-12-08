@@ -81,3 +81,7 @@ fn main() {
     writer.write_image_data(&image).unwrap();
 }
 
+#[test]
+fn test_main() {
+    main();
+}
