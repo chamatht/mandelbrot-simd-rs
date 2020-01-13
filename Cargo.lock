@@ -50,7 +50,7 @@ name = "mandelbrot-simd-rs"
 version = "0.1.0"
 dependencies = [
  "packed_simd 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "png 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "png 0.15.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -63,7 +63,7 @@ dependencies = [
 
 [[package]]
 name = "png"
-version = "0.15.2"
+version = "0.15.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "bitflags 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -81,4 +81,4 @@ dependencies = [
 "checksum deflate 0.7.20 (registry+https://github.com/rust-lang/crates.io-index)" = "707b6a7b384888a70c8d2e8650b3e60170dfc6a67bb4aa67b6dfca57af4bedb4"
 "checksum inflate 0.4.5 (registry+https://github.com/rust-lang/crates.io-index)" = "1cdb29978cc5797bd8dcc8e5bf7de604891df2a8dc576973d71a281e916db2ff"
 "checksum packed_simd 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)" = "a85ea9fc0d4ac0deb6fe7911d38786b32fc11119afd9e9d38b84ff691ce64220"
-"checksum png 0.15.2 (registry+https://github.com/rust-lang/crates.io-index)" = "247cb804bd7fc86d0c2b153d1374265e67945875720136ca8fe451f11c6aed52"
+"checksum png 0.15.3 (registry+https://github.com/rust-lang/crates.io-index)" = "ef859a23054bbfee7811284275ae522f0434a3c8e7f4b74bd4a35ae7e1c4a283"
